@@ -62,22 +62,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 
 .lightbox.open { display: flex; }
 .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 4px; }
 .lightbox-close { position: absolute; top: 1.5rem; right: 2rem; color: #fff; font-size: 32px; cursor: pointer; background: none; border: none; }
-.product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; padding: 5rem 3rem; max-width: 1100px; margin: 0 auto; border-top: 0.5px solid #E0DDD6; }
-.product-main-img { aspect-ratio: 3/4; border-radius: 12px; overflow: hidden; }
-.product-main-img img { width: 100%; height: 100%; object-fit: cover; }
-.product-origin-tag { font-size: 10px; letter-spacing: 0.16em; color: #8B7355; text-transform: uppercase; margin-bottom: 1rem; }
-.product-name-large { font-size: 36px; font-weight: 300; margin-bottom: 1.5rem; }
-.product-specs { border-top: 0.5px solid #E0DDD6; margin-bottom: 2rem; }
-.spec-row { display: flex; justify-content: space-between; padding: 0.9rem 0; border-bottom: 0.5px solid #E0DDD6; }
-.spec-key { font-size: 12px; color: #8B7355; }
-.spec-val { font-size: 13px; color: #1a1a18; }
-.product-desc-text { font-size: 14px; color: #6B6860; line-height: 1.8; margin-bottom: 2rem; }
-.cert-badge { display: inline-flex; align-items: center; gap: 8px; background: #F5F2ED; border: 0.5px solid #D8D4CC; border-radius: 6px; padding: 10px 16px; margin-bottom: 2rem; }
-.cert-icon { font-size: 18px; }
-.cert-text { font-size: 12px; color: #6B6860; line-height: 1.5; }
-.cert-text strong { display: block; color: #1a1a18; font-weight: 500; font-size: 13px; }
-.enquire-btn { display: block; width: 100%; background: #2C2416; color: #F5F0E8; border: none; padding: 15px; border-radius: 6px; font-size: 14px; letter-spacing: 0.08em; cursor: pointer; text-align: center; text-decoration: none; }
-.enquire-btn:hover { background: #3d3120; }
 .trust-wrap { background: #F5F2ED; }
 .trust { padding: 5rem 3rem; max-width: 1100px; margin: 0 auto; }
 .trust-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
@@ -117,7 +101,6 @@ span[data-lang].active { display: inline; }
   .section { padding: 3rem 1.5rem; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-item.large { grid-column: span 1; aspect-ratio: 3/4; }
-  .product-detail { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; }
   .trust-items { grid-template-columns: 1fr; }
   .trust { padding: 3rem 1.5rem; }
   .contact-section { padding: 4rem 1.5rem; }
@@ -130,7 +113,6 @@ span[data-lang].active { display: inline; }
   <div class="logo"><img src="sonu_logo.png" alt="Sonu Gems"></div>
   <div class="nav-links">
     <a href="#collection"><span data-lang="ja" class="active">コレクション</span><span data-lang="ur">مجموعہ</span><span data-lang="zh">珠寶系列</span><span data-lang="en">Collection</span></a>
-    <a href="#aquamarine"><span data-lang="ja" class="active">アクアマリン</span><span data-lang="ur">فیروزہ</span><span data-lang="zh">海藍寶</span><span data-lang="en">Aquamarine</span></a>
     <a href="#contact"><span data-lang="ja" class="active">お問い合わせ</span><span data-lang="ur">رابطہ</span><span data-lang="zh">聯絡我們</span><span data-lang="en">Contact</span></a>
   </div>
   <div class="lang-switcher">
@@ -190,7 +172,7 @@ span[data-lang].active { display: inline; }
   <div class="stats">
     <div class="stat"><div class="stat-num">17 kg</div><div class="stat-label"><span data-lang="ja" class="active">主要アクアマリン標本</span><span data-lang="ur">بنیادی فیروزہ نمونہ</span><span data-lang="zh">主要海藍寶標本</span><span data-lang="en">Primary aquamarine specimen</span></div></div>
     <div class="stat"><div class="stat-num">100%</div><div class="stat-label"><span data-lang="ja" class="active">無処理・無加熱確認済</span><span data-lang="ur">غیر معالج، غیر گرم</span><span data-lang="zh">天然無處理已確認</span><span data-lang="en">Untreated & unheated</span></div></div>
-    <div class="stat"><div class="stat-num">GGI</div><div class="stat-label"><span data-lang="ja" class="active">公式鑑別書取得済み</span><span data-lang="ur">سرکاری سرٹیفکیٹ</span><span data-lang="zh">附官方鑑定證書</span><span data-lang="en">Certified with documentation</span></div></div>
+    <div class="stat"><div class="stat-num">GGI</div><div class="stat-label"><span data-lang="ja" class="active">公式鑑別書取得済み</span><span data-lang="ur">سرکاری سرٹیفکیٹ</span><span data-lang="zh">附官方鑑別書</span><span data-lang="en">Certified with documentation</span></div></div>
   </div>
 </div>
 <section class="section" id="collection">
@@ -198,8 +180,7 @@ span[data-lang].active { display: inline; }
   <h2 class="section-title"><span data-lang="ja" class="active">アクアマリン原石ギャラリー</span><span data-lang="ur" class="rtl">فیروزہ پتھر گیلری</span><span data-lang="zh">海藍寶原石系列</span><span data-lang="en">Aquamarine specimen gallery</span></h2>
   <p class="section-sub"><span data-lang="ja" class="active">ナガル渓谷産、GGI鑑別書付き無加熱原石。全10点の随伴標本。</span><span data-lang="ur" class="rtl">ناگر وادی سے GGI سرٹیفائیڈ، 10 نمونے دستیاب۔</span><span data-lang="zh">納加爾谷產，GGI認證未加熱原石，共10件隨附標本。</span><span data-lang="en">Nagar Valley origin, GGI certified unheated specimens. 10 associated pieces available.</span></p>
   <div class="gallery-grid">
-    <div class="gallery-item large" onclick="openLightbox('IMG_9376.JPG')"><img src="IMG_9376.JPG" alt="Aquamarine" loading="lazy"></div>
-    <div class="gallery-item" onclick="openLightbox('IMG_9378.JPG')"><img src="IMG_9378.JPG" alt="Aquamarine" loading="lazy"></div>
+    <div class="gallery-item large" onclick="openLightbox('IMG_9378.JPG')"><img src="IMG_9378.JPG" alt="Aquamarine" loading="lazy"></div>
     <div class="gallery-item" onclick="openLightbox('IMG_9379.JPG')"><img src="IMG_9379.JPG" alt="Aquamarine" loading="lazy"></div>
     <div class="gallery-item" onclick="openLightbox('IMG_9380.JPG')"><img src="IMG_9380.JPG" alt="Aquamarine" loading="lazy"></div>
     <div class="gallery-item" onclick="openLightbox('IMG_9377.JPG')"><img src="IMG_9377.JPG" alt="Aquamarine" loading="lazy"></div>
@@ -214,24 +195,6 @@ span[data-lang].active { display: inline; }
   <button class="lightbox-close" onclick="closeLightbox()">×</button>
   <img id="lightbox-img" src="" alt="">
 </div>
-<section class="product-detail" id="aquamarine">
-  <div class="product-main-img"><img src="IMG_9376.JPG" alt="Primary Aquamarine Specimen"></div>
-  <div class="product-info-block">
-    <div class="product-origin-tag">Nagar Valley, Gilgit-Baltistan · Pakistan</div>
-    <h2 class="product-name-large"><span data-lang="ja" class="active">アクアマリン原石<br>主要標本</span><span data-lang="ur" class="rtl">فیروزہ خام پتھر<br>بنیادی نمونہ</span><span data-lang="zh">海藍寶原石<br>主要標本</span><span data-lang="en">Aquamarine Rough<br>Primary Specimen</span></h2>
-    <div class="product-specs">
-      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">重量</span><span data-lang="ur">وزن</span><span data-lang="zh">重量</span><span data-lang="en">Weight</span></span><span class="spec-val">約 17 kg</span></div>
-      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">色調</span><span data-lang="ur">رنگ</span><span data-lang="zh">顏色</span><span data-lang="en">Color</span></span><span class="spec-val">Light Blue, Transparent to Semi-Transparent</span></div>
-      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">産地</span><span data-lang="ur">پیدائش</span><span data-lang="zh">產地</span><span data-lang="en">Origin</span></span><span class="spec-val">Nagar Valley, Gilgit-Baltistan, Pakistan</span></div>
-      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">処理</span><span data-lang="ur">علاج</span><span data-lang="zh">處理</span><span data-lang="en">Treatment</span></span><span class="spec-val"><span data-lang="ja" class="active">無加熱・無処理</span><span data-lang="ur">غیر معالج</span><span data-lang="zh">未加熱，無處理</span><span data-lang="en">Unheated, Untreated</span></span></div>
-      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">鑑別書</span><span data-lang="ur">سرٹیفکیٹ</span><span data-lang="zh">鑑別書</span><span data-lang="en">Certificate</span></span><span class="spec-val">GGI (Gem & Gemmology Institute)</span></div>
-      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">随伴標本</span><span data-lang="ur">متعلقہ نمونے</span><span data-lang="zh">隨附標本</span><span data-lang="en">Associated pieces</span></span><span class="spec-val"><span data-lang="ja" class="active">10点（合計約32kg）</span><span data-lang="ur">10 نمونے (کل 32kg)</span><span data-lang="zh">10件（合計約32kg）</span><span data-lang="en">10 pieces (total approx. 32kg)</span></span></div>
-    </div>
-    <p class="product-desc-text"><span data-lang="ja" class="active">パキスタン・ギルギット・バルティスタン州ナガル渓谷産の希少なアクアマリン原石です。無加熱・無処理であることがGGI鑑別書により公式に証明されており、日本への正規輸入・通関手続きも完了しています。</span><span data-lang="ur" class="rtl">پاکستان کی ناگر وادی سے نایاب فیروزہ پتھر۔ GGI سرٹیفکیٹ کے ساتھ غیر معالج اور جاپان میں قانونی طور پر درآمد شدہ۔</span><span data-lang="zh">來自巴基斯坦吉爾吉特-巴爾蒂斯坦納加爾谷的稀有海藍寶原石。GGI官方鑑別書認證未加熱及無處理，已完成日本清關手續。</span><span data-lang="en">A rare aquamarine rough specimen from the Nagar Valley, Gilgit-Baltistan, Pakistan. Officially certified unheated and untreated by GGI certificate, with all Japanese customs clearance completed.</span></p>
-    <div class="cert-badge"><span class="cert-icon">📋</span><div class="cert-text"><strong>GGI 鑑別書</strong><span data-lang="ja" class="active">産地・無処理を公式証明済み</span><span data-lang="ur">پیدائش اور غیر معالج سرکاری تصدیق</span><span data-lang="zh">產地及處理狀態官方鑑定</span><span data-lang="en">Origin & treatment officially certified</span></div></div>
-    <a href="mailto:info@sonugems.com" class="enquire-btn"><span data-lang="ja" class="active">購入・商談のお問い合わせ →</span><span data-lang="ur">خریداری کے لیے رابطہ کریں →</span><span data-lang="zh">查詢此標本 →</span><span data-lang="en">Enquire about this piece →</span></a>
-  </div>
-</section>
 <div class="trust-wrap">
   <div class="trust">
     <div class="section-eyebrow">Why Sonu Gems</div>
@@ -258,14 +221,8 @@ span[data-lang].active { display: inline; }
 <script>
 var currentSlide = 0;
 var totalSlides = 2;
-function changeSlide(dir) {
-  currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
-  updateSlider();
-}
-function goToSlide(index) {
-  currentSlide = index;
-  updateSlider();
-}
+function changeSlide(dir) { currentSlide = (currentSlide + dir + totalSlides) % totalSlides; updateSlider(); }
+function goToSlide(index) { currentSlide = index; updateSlider(); }
 function updateSlider() {
   var slider = document.getElementById('heroSlider');
   if (slider) { slider.style.transform = 'translateX(-' + (currentSlide * 50) + '%)'; }
