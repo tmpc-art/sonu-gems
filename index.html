@@ -3,193 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SONU GEMS — Pakistan Origin Untreated Gemstones</title>
+<title>Sonu Gems — Pakistan Origin Untreated Gemstones</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; background: #FAFAF8; color: #1a1a18; }
-
-/* NAV */
-.nav {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 1.2rem 3rem;
-  border-bottom: 0.5px solid #E0DDD6;
-  background: #FAFAF8;
-  position: sticky; top: 0; z-index: 100;
-}
-.logo { font-size: 20px; font-weight: 500; letter-spacing: 0.14em; color: #1a1a18; }
-.logo span { color: #8B7355; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 3rem; border-bottom: 0.5px solid #E0DDD6; background: rgba(250,250,248,0.95); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
+.logo img { height: 44px; width: auto; object-fit: contain; }
 .nav-links { display: flex; gap: 2.5rem; align-items: center; }
-.nav-links a { font-size: 13px; color: #6B6860; text-decoration: none; letter-spacing: 0.04em; cursor: pointer; }
+.nav-links a { font-size: 13px; color: #6B6860; text-decoration: none; letter-spacing: 0.04em; }
 .nav-links a:hover { color: #1a1a18; }
 .lang-switcher { display: flex; gap: 6px; }
-.lang-btn {
-  background: none; border: 0.5px solid #D0CEC7;
-  border-radius: 4px; padding: 4px 10px; font-size: 12px;
-  cursor: pointer; color: #6B6860; transition: all 0.15s;
-}
-.lang-btn.active, .lang-btn:hover {
-  background: #F0EDE8; color: #1a1a18; border-color: #B0ADA6;
-}
-
-/* HERO */
-.hero {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
-  align-items: center; padding: 6rem 3rem 5rem;
-  max-width: 1100px; margin: 0 auto;
-}
-.hero-eyebrow {
-  font-size: 11px; letter-spacing: 0.2em; color: #8B7355;
-  text-transform: uppercase; margin-bottom: 1.4rem;
-}
-.hero-title {
-  font-size: 42px; font-weight: 300; line-height: 1.18;
-  color: #1a1a18; margin-bottom: 1.6rem; letter-spacing: -0.02em;
-}
-.hero-title em { font-style: italic; color: #8B7355; font-weight: 400; }
-.hero-desc {
-  font-size: 15px; color: #6B6860; line-height: 1.75;
-  margin-bottom: 2.2rem; max-width: 420px;
-}
-.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn-primary {
-  background: #2C2416; color: #F5F0E8;
-  border: none; padding: 12px 28px; border-radius: 4px;
-  font-size: 13px; letter-spacing: 0.06em; cursor: pointer;
-  text-decoration: none; display: inline-block;
-}
-.btn-primary:hover { background: #3d3120; }
-.btn-secondary {
-  background: none; color: #1a1a18;
-  border: 0.5px solid #C0BDB6; padding: 12px 28px; border-radius: 4px;
-  font-size: 13px; letter-spacing: 0.06em; cursor: pointer;
-  text-decoration: none; display: inline-block;
-}
-.btn-secondary:hover { background: #F0EDE8; }
-
-.hero-visual {
-  aspect-ratio: 1;
-  background: linear-gradient(135deg, #E8F4F8 0%, #C8E4F0 50%, #A8D0E8 100%);
-  border-radius: 12px; display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden;
-}
-.hero-visual-inner { font-size: 100px; opacity: 0.55; }
-.gem-label {
-  position: absolute; bottom: 20px; left: 20px; right: 20px;
-  background: rgba(255,255,255,0.9);
-  border-radius: 8px; padding: 12px 16px;
-  display: flex; justify-content: space-between; align-items: center;
-}
-.gem-label-left {}
-.gem-label-name { font-size: 13px; font-weight: 500; color: #2C2416; margin-bottom: 2px; }
-.gem-label-sub { font-size: 11px; color: #8B7355; }
-.gem-label-badge {
-  font-size: 10px; background: #E8F4F8; color: #1a6080;
-  padding: 4px 10px; border-radius: 20px; letter-spacing: 0.04em; white-space: nowrap;
-}
-
-/* STATS */
-.stats-wrap { border-top: 0.5px solid #E0DDD6; border-bottom: 0.5px solid #E0DDD6; }
-.stats {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  max-width: 1100px; margin: 0 auto;
-}
-.stat {
-  padding: 2rem 3rem; border-right: 0.5px solid #E0DDD6;
-}
+.lang-btn { background: none; border: 0.5px solid #D0CEC7; border-radius: 4px; padding: 4px 10px; font-size: 12px; cursor: pointer; color: #6B6860; transition: all 0.15s; }
+.lang-btn.active, .lang-btn:hover { background: #F0EDE8; color: #1a1a18; border-color: #B0ADA6; }
+.hero { position: relative; height: 92vh; min-height: 600px; display: flex; align-items: flex-end; overflow: hidden; }
+.hero-img { position: absolute; inset: 0; background: url('IMG_9376.JPG') center center / cover no-repeat; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0) 100%); }
+.hero-content { position: relative; z-index: 2; padding: 4rem 3rem; width: 100%; display: flex; justify-content: space-between; align-items: flex-end; }
+.hero-eyebrow { font-size: 11px; letter-spacing: 0.22em; color: #C8A96E; text-transform: uppercase; margin-bottom: 1rem; }
+.hero-title { font-size: 52px; font-weight: 300; line-height: 1.12; color: #fff; letter-spacing: -0.02em; margin-bottom: 1.2rem; }
+.hero-title em { font-style: italic; color: #C8A96E; }
+.hero-desc { font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.7; max-width: 480px; margin-bottom: 2rem; }
+.hero-btns { display: flex; gap: 12px; }
+.btn-light { background: #fff; color: #1a1a18; border: none; padding: 13px 30px; border-radius: 4px; font-size: 13px; letter-spacing: 0.06em; cursor: pointer; text-decoration: none; display: inline-block; }
+.btn-light:hover { background: #F0EDE8; }
+.btn-outline { background: none; color: #fff; border: 0.5px solid rgba(255,255,255,0.5); padding: 13px 30px; border-radius: 4px; font-size: 13px; letter-spacing: 0.06em; cursor: pointer; text-decoration: none; display: inline-block; }
+.btn-outline:hover { background: rgba(255,255,255,0.1); }
+.hero-badge { background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 1.2rem 1.5rem; text-align: right; }
+.hero-badge-name { font-size: 14px; color: #fff; margin-bottom: 4px; }
+.hero-badge-sub { font-size: 11px; color: rgba(255,255,255,0.65); margin-bottom: 10px; }
+.hero-badge-tag { font-size: 10px; background: rgba(200,169,110,0.3); color: #C8A96E; padding: 4px 10px; border-radius: 20px; display: inline-block; letter-spacing: 0.06em; }
+.stats-wrap { border-bottom: 0.5px solid #E0DDD6; background: #fff; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 1100px; margin: 0 auto; }
+.stat { padding: 2rem 3rem; border-right: 0.5px solid #E0DDD6; }
 .stat:last-child { border-right: none; }
-.stat-num { font-size: 32px; font-weight: 300; color: #1a1a18; margin-bottom: 6px; letter-spacing: -0.02em; }
+.stat-num { font-size: 34px; font-weight: 300; color: #1a1a18; margin-bottom: 6px; letter-spacing: -0.02em; }
 .stat-label { font-size: 12px; color: #8B7355; letter-spacing: 0.06em; }
-
-/* SECTIONS */
 .section { padding: 5rem 3rem; max-width: 1100px; margin: 0 auto; }
 .section-eyebrow { font-size: 11px; letter-spacing: 0.2em; color: #8B7355; text-transform: uppercase; margin-bottom: 1rem; }
-.section-title { font-size: 28px; font-weight: 300; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+.section-title { font-size: 30px; font-weight: 300; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
 .section-sub { font-size: 14px; color: #6B6860; margin-bottom: 3rem; line-height: 1.7; }
-
-/* PRODUCTS */
-.products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-.product-card {
-  border: 0.5px solid #E0DDD6; border-radius: 12px; overflow: hidden;
-  background: #fff; cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s;
-}
-.product-card:hover { border-color: #B0ADA6; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-.product-img {
-  aspect-ratio: 4/3; display: flex; align-items: center;
-  justify-content: center; font-size: 72px;
-}
-.product-img.aqua { background: linear-gradient(135deg, #E8F4F8 0%, #B8DCEC 100%); }
-.product-img.emerald { background: linear-gradient(135deg, #E8F4EE 0%, #A0D0B4 100%); }
-.product-info { padding: 1.2rem 1.5rem 1.5rem; }
-.product-origin { font-size: 10px; letter-spacing: 0.14em; color: #8B7355; text-transform: uppercase; margin-bottom: 8px; }
-.product-name { font-size: 17px; font-weight: 400; margin-bottom: 8px; }
-.product-spec { font-size: 13px; color: #6B6860; line-height: 1.65; margin-bottom: 12px; }
-.product-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.tag {
-  font-size: 10px; padding: 4px 10px; border-radius: 20px;
-  border: 0.5px solid #D0CEC7; color: #6B6860; letter-spacing: 0.03em;
-}
-
-/* TRUST */
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.gallery-item { aspect-ratio: 3/4; overflow: hidden; border-radius: 8px; cursor: pointer; position: relative; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-item.large { grid-column: span 2; aspect-ratio: 4/3; }
+.lightbox { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 4px; }
+.lightbox-close { position: absolute; top: 1.5rem; right: 2rem; color: #fff; font-size: 32px; cursor: pointer; line-height: 1; background: none; border: none; }
+.product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; padding: 5rem 3rem; max-width: 1100px; margin: 0 auto; border-top: 0.5px solid #E0DDD6; }
+.product-main-img { aspect-ratio: 3/4; border-radius: 12px; overflow: hidden; }
+.product-main-img img { width: 100%; height: 100%; object-fit: cover; }
+.product-origin-tag { font-size: 10px; letter-spacing: 0.16em; color: #8B7355; text-transform: uppercase; margin-bottom: 1rem; }
+.product-name-large { font-size: 36px; font-weight: 300; margin-bottom: 1.5rem; letter-spacing: -0.01em; }
+.product-specs { border-top: 0.5px solid #E0DDD6; margin-bottom: 2rem; }
+.spec-row { display: flex; justify-content: space-between; padding: 0.9rem 0; border-bottom: 0.5px solid #E0DDD6; }
+.spec-key { font-size: 12px; color: #8B7355; letter-spacing: 0.05em; }
+.spec-val { font-size: 13px; color: #1a1a18; }
+.product-desc-text { font-size: 14px; color: #6B6860; line-height: 1.8; margin-bottom: 2rem; }
+.cert-badge { display: inline-flex; align-items: center; gap: 8px; background: #F5F2ED; border: 0.5px solid #D8D4CC; border-radius: 6px; padding: 10px 16px; margin-bottom: 2rem; }
+.cert-icon { font-size: 18px; }
+.cert-text { font-size: 12px; color: #6B6860; line-height: 1.5; }
+.cert-text strong { display: block; color: #1a1a18; font-weight: 500; font-size: 13px; }
+.enquire-btn { display: block; width: 100%; background: #2C2416; color: #F5F0E8; border: none; padding: 15px; border-radius: 6px; font-size: 14px; letter-spacing: 0.08em; cursor: pointer; text-align: center; text-decoration: none; }
+.enquire-btn:hover { background: #3d3120; }
 .trust-wrap { background: #F5F2ED; }
 .trust { padding: 5rem 3rem; max-width: 1100px; margin: 0 auto; }
 .trust-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
-.trust-item {
-  background: #fff; border: 0.5px solid #E0DDD6;
-  border-radius: 12px; padding: 1.5rem;
-}
-.trust-icon { font-size: 24px; margin-bottom: 1rem; color: #8B7355; }
-.trust-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
-.trust-desc { font-size: 13px; color: #6B6860; line-height: 1.7; }
-
-/* CONTACT */
-.contact-bar {
-  padding: 4rem 3rem; max-width: 1100px; margin: 0 auto;
-  display: flex; align-items: center; justify-content: space-between; gap: 2rem;
-  border-top: 0.5px solid #E0DDD6;
-}
-.contact-text h3 { font-size: 20px; font-weight: 300; margin-bottom: 6px; }
-.contact-text p { font-size: 13px; color: #6B6860; line-height: 1.7; }
-
-/* FOOTER */
-footer {
-  border-top: 0.5px solid #E0DDD6; padding: 1.8rem 3rem;
-  display: flex; justify-content: space-between; align-items: center;
-  background: #FAFAF8;
-}
-.footer-logo { font-size: 14px; font-weight: 500; letter-spacing: 0.12em; color: #6B6860; }
+.trust-item { background: #fff; border: 0.5px solid #E0DDD6; border-radius: 12px; padding: 1.8rem; }
+.trust-icon { font-size: 26px; margin-bottom: 1rem; }
+.trust-title { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+.trust-desc { font-size: 13px; color: #6B6860; line-height: 1.75; }
+.contact-section { padding: 6rem 3rem; text-align: center; border-top: 0.5px solid #E0DDD6; max-width: 700px; margin: 0 auto; }
+.contact-section h2 { font-size: 32px; font-weight: 300; margin-bottom: 1rem; }
+.contact-section p { font-size: 15px; color: #6B6860; line-height: 1.75; margin-bottom: 2.5rem; }
+.contact-btn { display: inline-block; background: #2C2416; color: #F5F0E8; padding: 14px 40px; border-radius: 4px; text-decoration: none; font-size: 13px; letter-spacing: 0.08em; }
+.contact-btn:hover { background: #3d3120; }
+footer { border-top: 0.5px solid #E0DDD6; padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; background: #FAFAF8; }
+.footer-logo img { height: 28px; width: auto; opacity: 0.6; }
 .footer-copy { font-size: 11px; color: #A0A09A; }
-
-/* LANG */
 [data-lang] { display: none; }
 [data-lang].active { display: block; }
 span[data-lang] { display: none; }
 span[data-lang].active { display: inline; }
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .nav { padding: 1rem 1.5rem; }
   .nav-links { display: none; }
-  .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; }
-  .hero-title { font-size: 30px; }
+  .hero-content { flex-direction: column; align-items: flex-start; gap: 1.5rem; padding: 2.5rem 1.5rem; }
+  .hero-title { font-size: 34px; }
+  .hero-badge { align-self: flex-start; text-align: left; }
   .stats { grid-template-columns: 1fr; }
   .stat { border-right: none; border-bottom: 0.5px solid #E0DDD6; padding: 1.5rem; }
   .stat:last-child { border-bottom: none; }
   .section { padding: 3rem 1.5rem; }
-  .products { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item.large { grid-column: span 1; aspect-ratio: 3/4; }
+  .product-detail { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; }
   .trust-items { grid-template-columns: 1fr; }
   .trust { padding: 3rem 1.5rem; }
-  .contact-bar { flex-direction: column; align-items: flex-start; padding: 3rem 1.5rem; }
-  footer { flex-direction: column; gap: 8px; padding: 1.5rem; text-align: center; }
+  .contact-section { padding: 4rem 1.5rem; }
+  footer { flex-direction: column; gap: 10px; padding: 1.5rem; text-align: center; }
 }
 </style>
 </head>
 <body>
-
 <nav class="nav">
-  <div class="logo">SONU <span>GEMS</span></div>
+  <div class="logo"><img src="スクリーンショット 2026-04-22 16.22.17.png" alt="Sonu Gems"></div>
   <div class="nav-links">
-    <a href="#collection"><span data-lang="ja" class="active">商品一覧</span><span data-lang="en">Collection</span><span data-lang="zh">珠寶系列</span></a>
-    <a href="#origin"><span data-lang="ja" class="active">産地について</span><span data-lang="en">Origin</span><span data-lang="zh">產地介紹</span></a>
+    <a href="#collection"><span data-lang="ja" class="active">コレクション</span><span data-lang="en">Collection</span><span data-lang="zh">珠寶系列</span></a>
+    <a href="#aquamarine"><span data-lang="ja" class="active">アクアマリン</span><span data-lang="en">Aquamarine</span><span data-lang="zh">海藍寶</span></a>
     <a href="#contact"><span data-lang="ja" class="active">お問い合わせ</span><span data-lang="en">Contact</span><span data-lang="zh">聯絡我們</span></a>
   </div>
   <div class="lang-switcher">
@@ -198,199 +120,110 @@ span[data-lang].active { display: inline; }
     <button class="lang-btn" onclick="setLang('zh')">🇹🇼 繁</button>
   </div>
 </nav>
-
 <section class="hero">
-  <div>
-    <div class="hero-eyebrow">Pakistan · Untreated · Certified</div>
-    <h1 class="hero-title">
-      <span data-lang="ja" class="active">パキスタン産<br><em>無処理原石</em>の<br>希少な美しさ</span>
-      <span data-lang="en"><em>Untreated</em> gems<br>from the heart<br>of Pakistan</span>
-      <span data-lang="zh">來自巴基斯坦<br><em>天然無處理</em><br>珍稀原石</span>
-    </h1>
-    <p class="hero-desc">
-      <span data-lang="ja" class="active">ナガル渓谷のアクアマリン、スワット産エメラルド。産地直送、鑑定書付きの無処理原石をコレクター・バイヤー向けに提供します。</span>
-      <span data-lang="en">Aquamarine from the Nagar Valley, emeralds from Swat. Certified untreated rough gemstones sourced directly for collectors and trade buyers.</span>
-      <span data-lang="zh">納加爾谷的海藍寶，斯瓦特的祖母綠。直接產地來源，附鑑定書的天然無處理原石，專供收藏家與買家。</span>
-    </p>
-    <div class="hero-btns">
-      <a href="#collection" class="btn-primary">
-        <span data-lang="ja" class="active">商品を見る</span>
-        <span data-lang="en">View Collection</span>
-        <span data-lang="zh">瀏覽系列</span>
-      </a>
-      <a href="#contact" class="btn-secondary">
-        <span data-lang="ja" class="active">お問い合わせ</span>
-        <span data-lang="en">Enquire</span>
-        <span data-lang="zh">查詢</span>
-      </a>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-visual-inner">💎</div>
-    <div class="gem-label">
-      <div class="gem-label-left">
-        <div class="gem-label-name">Aquamarine · アクアマリン</div>
-        <div class="gem-label-sub">Nagar Valley, Pakistan · 約17kg</div>
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Pakistan · Untreated · Certified</div>
+      <h1 class="hero-title">
+        <span data-lang="ja" class="active">パキスタン産<br><em>無処理原石</em>の<br>希少な美しさ</span>
+        <span data-lang="en"><em>Untreated</em> gems<br>from the heart<br>of Pakistan</span>
+        <span data-lang="zh">來自巴基斯坦<br><em>天然無處理</em><br>珍稀原石</span>
+      </h1>
+      <p class="hero-desc">
+        <span data-lang="ja" class="active">ナガル渓谷のアクアマリン、スワット産エメラルド。産地直送、鑑定書付きの無処理原石をコレクター・バイヤー向けに提供します。</span>
+        <span data-lang="en">Aquamarine from the Nagar Valley, emeralds from Swat. Certified untreated rough gemstones sourced directly for collectors and trade buyers.</span>
+        <span data-lang="zh">納加爾谷的海藍寶，斯瓦特的祖母綠。直接產地來源，附鑑定書的天然無處理原石，專供收藏家與買家。</span>
+      </p>
+      <div class="hero-btns">
+        <a href="#collection" class="btn-light"><span data-lang="ja" class="active">コレクションを見る</span><span data-lang="en">View Collection</span><span data-lang="zh">瀏覽系列</span></a>
+        <a href="#contact" class="btn-outline"><span data-lang="ja" class="active">お問い合わせ</span><span data-lang="en">Enquire</span><span data-lang="zh">查詢</span></a>
       </div>
-      <div class="gem-label-badge">GGI Certified</div>
+    </div>
+    <div class="hero-badge">
+      <div class="hero-badge-name">Aquamarine · アクアマリン</div>
+      <div class="hero-badge-sub">Nagar Valley, Gilgit-Baltistan · Pakistan</div>
+      <span class="hero-badge-tag">GGI Certified · Unheated</span>
     </div>
   </div>
 </section>
-
 <div class="stats-wrap">
   <div class="stats">
-    <div class="stat">
-      <div class="stat-num">17 kg</div>
-      <div class="stat-label"><span data-lang="ja" class="active">主要アクアマリン標本</span><span data-lang="en">Primary aquamarine specimen</span><span data-lang="zh">主要海藍寶標本</span></div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">100%</div>
-      <div class="stat-label"><span data-lang="ja" class="active">無処理・無加熱</span><span data-lang="en">Untreated, unheated</span><span data-lang="zh">天然無處理</span></div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">GGI</div>
-      <div class="stat-label"><span data-lang="ja" class="active">鑑定書付き</span><span data-lang="en">Certified origin</span><span data-lang="zh">附鑑定證書</span></div>
-    </div>
+    <div class="stat"><div class="stat-num">17 kg</div><div class="stat-label"><span data-lang="ja" class="active">主要アクアマリン標本</span><span data-lang="en">Primary aquamarine specimen</span><span data-lang="zh">主要海藍寶標本</span></div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label"><span data-lang="ja" class="active">無処理・無加熱確認済</span><span data-lang="en">Untreated & unheated</span><span data-lang="zh">天然無處理已確認</span></div></div>
+    <div class="stat"><div class="stat-num">GGI</div><div class="stat-label"><span data-lang="ja" class="active">公式鑑定書取得済み</span><span data-lang="en">Certified with documentation</span><span data-lang="zh">附官方鑑定證書</span></div></div>
   </div>
 </div>
-
 <section class="section" id="collection">
   <div class="section-eyebrow">Collection</div>
-  <h2 class="section-title">
-    <span data-lang="ja" class="active">取り扱い原石</span>
-    <span data-lang="en">Gemstone collection</span>
-    <span data-lang="zh">珠寶系列</span>
-  </h2>
-  <p class="section-sub">
-    <span data-lang="ja" class="active">すべて産地証明・鑑定書付きの無処理原石</span>
-    <span data-lang="en">All specimens certified, untreated, with provenance documentation</span>
-    <span data-lang="zh">所有標本均附產地證明及鑑定書，天然無處理</span>
-  </p>
-  <div class="products">
-    <div class="product-card">
-      <div class="product-img aqua">💎</div>
-      <div class="product-info">
-        <div class="product-origin">Nagar Valley, Gilgit-Baltistan · Pakistan</div>
-        <div class="product-name">
-          <span data-lang="ja" class="active">アクアマリン原石</span>
-          <span data-lang="en">Aquamarine rough</span>
-          <span data-lang="zh">海藍寶原石</span>
-        </div>
-        <div class="product-spec">
-          <span data-lang="ja" class="active">約17kg · Light Blue, Transparent · 無加熱確認済</span>
-          <span data-lang="en">~17kg · Light Blue, Transparent · Unheated confirmed</span>
-          <span data-lang="zh">約17kg · 淡藍色，透明 · 已確認未加熱</span>
-        </div>
-        <div class="product-tags">
-          <span class="tag">GGI Certified</span>
-          <span class="tag">Unheated</span>
-          <span class="tag">Natural origin</span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="product-img emerald">🌿</div>
-      <div class="product-info">
-        <div class="product-origin">Swat Valley · Pakistan</div>
-        <div class="product-name">
-          <span data-lang="ja" class="active">エメラルド原石</span>
-          <span data-lang="en">Emerald rough</span>
-          <span data-lang="zh">祖母綠原石</span>
-        </div>
-        <div class="product-spec">
-          <span data-lang="ja" class="active">スワット産 · 無オイル処理 · 希少標本</span>
-          <span data-lang="en">Swat origin · No-oil treatment · Rare specimen</span>
-          <span data-lang="zh">斯瓦特產 · 無油處理 · 稀有標本</span>
-        </div>
-        <div class="product-tags">
-          <span class="tag">No-oil</span>
-          <span class="tag">Untreated</span>
-          <span class="tag">Swat origin</span>
-        </div>
-      </div>
-    </div>
+  <h2 class="section-title"><span data-lang="ja" class="active">アクアマリン原石ギャラリー</span><span data-lang="en">Aquamarine specimen gallery</span><span data-lang="zh">海藍寶原石系列</span></h2>
+  <p class="section-sub"><span data-lang="ja" class="active">ナガル渓谷産、GGI鑑定書付き無加熱原石。全10点の随伴標本。</span><span data-lang="en">Nagar Valley origin, GGI certified unheated specimens. 10 associated pieces available.</span><span data-lang="zh">納加爾谷產，GGI認證未加熱原石，共10件隨附標本。</span></p>
+  <div class="gallery-grid">
+    <div class="gallery-item large" onclick="openLightbox('IMG_9376.JPG')"><img src="IMG_9376.JPG" alt="Aquamarine" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('IMG_9378.JPG')"><img src="IMG_9378.JPG" alt="Aquamarine" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('IMG_9379.JPG')"><img src="IMG_9379.JPG" alt="Aquamarine" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('IMG_9380.JPG')"><img src="IMG_9380.JPG" alt="Aquamarine" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('IMG_9377.JPG')"><img src="IMG_9377.JPG" alt="Aquamarine" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('IMG_9375.JPG')"><img src="IMG_9375.JPG" alt="Aquamarine" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('IMG_9374.JPG')"><img src="IMG_9374.JPG" alt="Aquamarine" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('IMG_9373.JPG')"><img src="IMG_9373.JPG" alt="Aquamarine" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('IMG_9372.JPG')"><img src="IMG_9372.JPG" alt="Aquamarine" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('IMG_9371.JPG')"><img src="IMG_9371.JPG" alt="Aquamarine" loading="lazy"></div>
   </div>
 </section>
-
-<div class="trust-wrap" id="origin">
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+<section class="product-detail" id="aquamarine">
+  <div class="product-main-img"><img src="IMG_9376.JPG" alt="Primary Aquamarine Specimen"></div>
+  <div class="product-info-block">
+    <div class="product-origin-tag">Nagar Valley, Gilgit-Baltistan · Pakistan</div>
+    <h2 class="product-name-large"><span data-lang="ja" class="active">アクアマリン原石<br>主要標本</span><span data-lang="en">Aquamarine Rough<br>Primary Specimen</span><span data-lang="zh">海藍寶原石<br>主要標本</span></h2>
+    <div class="product-specs">
+      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">重量</span><span data-lang="en">Weight</span><span data-lang="zh">重量</span></span><span class="spec-val">約 17 kg</span></div>
+      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">色調</span><span data-lang="en">Color</span><span data-lang="zh">顏色</span></span><span class="spec-val">Light Blue, Transparent to Semi-Transparent</span></div>
+      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">産地</span><span data-lang="en">Origin</span><span data-lang="zh">產地</span></span><span class="spec-val">Nagar Valley, Gilgit-Baltistan, Pakistan</span></div>
+      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">処理</span><span data-lang="en">Treatment</span><span data-lang="zh">處理</span></span><span class="spec-val"><span data-lang="ja" class="active">無加熱・無処理</span><span data-lang="en">Unheated, Untreated</span><span data-lang="zh">未加熱，無處理</span></span></div>
+      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">鑑定</span><span data-lang="en">Certificate</span><span data-lang="zh">鑑定</span></span><span class="spec-val">GGI (Gem & Gemmology Institute)</span></div>
+      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">随伴標本</span><span data-lang="en">Associated pieces</span><span data-lang="zh">隨附標本</span></span><span class="spec-val"><span data-lang="ja" class="active">10点（合計約71kg）</span><span data-lang="en">10 pieces (total approx. 71kg)</span><span data-lang="zh">10件（合計約71kg）</span></span></div>
+    </div>
+    <p class="product-desc-text">
+      <span data-lang="ja" class="active">パキスタン・ギルギット・バルティスタン州ナガル渓谷産の希少なアクアマリン原石です。無加熱・無処理であることがGGI鑑定書により公式に証明されており、日本への正規輸入・通関手続きも完了しています。</span>
+      <span data-lang="en">A rare aquamarine rough specimen from the Nagar Valley, Gilgit-Baltistan, Pakistan. Officially certified unheated and untreated by GGI, with all Japanese customs clearance completed.</span>
+      <span data-lang="zh">來自巴基斯坦吉爾吉特-巴爾蒂斯坦納加爾谷的稀有海藍寶原石。GGI官方認證未加熱及無處理，已完成日本清關手續。</span>
+    </p>
+    <div class="cert-badge">
+      <span class="cert-icon">📋</span>
+      <div class="cert-text"><strong>GGI Certificate of Authenticity</strong><span data-lang="ja" class="active">産地・無処理を公式証明済み</span><span data-lang="en">Origin & treatment officially documented</span><span data-lang="zh">產地及處理狀態官方認證</span></div>
+    </div>
+    <a href="mailto:info@sonugems.com" class="enquire-btn"><span data-lang="ja" class="active">購入・商談のお問い合わせ →</span><span data-lang="en">Enquire about this piece →</span><span data-lang="zh">查詢此標本 →</span></a>
+  </div>
+</section>
+<div class="trust-wrap">
   <div class="trust">
-    <div class="section-eyebrow">Why SONU Gems</div>
-    <h2 class="section-title">
-      <span data-lang="ja" class="active">信頼の根拠</span>
-      <span data-lang="en">Our commitment</span>
-      <span data-lang="zh">我們的承諾</span>
-    </h2>
+    <div class="section-eyebrow">Why Sonu Gems</div>
+    <h2 class="section-title"><span data-lang="ja" class="active">信頼の根拠</span><span data-lang="en">Our commitment</span><span data-lang="zh">我們的承諾</span></h2>
     <div class="trust-items">
-      <div class="trust-item">
-        <div class="trust-icon">📋</div>
-        <div class="trust-title">
-          <span data-lang="ja" class="active">鑑定書付き</span>
-          <span data-lang="en">Certified gemstones</span>
-          <span data-lang="zh">附鑑定證書</span>
-        </div>
-        <div class="trust-desc">
-          <span data-lang="ja" class="active">GGI鑑定書取得済み。産地・無処理を公式に証明しています。</span>
-          <span data-lang="en">GGI certified. Origin and treatment status officially documented.</span>
-          <span data-lang="zh">GGI認證，官方記錄產地及處理狀態。</span>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">📍</div>
-        <div class="trust-title">
-          <span data-lang="ja" class="active">産地直接調達</span>
-          <span data-lang="en">Direct source</span>
-          <span data-lang="zh">直接產地採購</span>
-        </div>
-        <div class="trust-desc">
-          <span data-lang="ja" class="active">パキスタン鉱山から直接仕入れ。中間業者を介しません。</span>
-          <span data-lang="en">Sourced directly from Pakistani mines. No middlemen.</span>
-          <span data-lang="zh">直接來自巴基斯坦礦場，無中間商。</span>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">✅</div>
-        <div class="trust-title">
-          <span data-lang="ja" class="active">正規輸入・通関済み</span>
-          <span data-lang="en">Legal import</span>
-          <span data-lang="zh">合法進口清關</span>
-        </div>
-        <div class="trust-desc">
-          <span data-lang="ja" class="active">日本への正規輸入・通関手続き完了済みです。</span>
-          <span data-lang="en">Formally imported and cleared through Japanese customs.</span>
-          <span data-lang="zh">已完成日本正規進口及清關手續。</span>
-        </div>
-      </div>
+      <div class="trust-item"><div class="trust-icon">📋</div><div class="trust-title"><span data-lang="ja" class="active">GGI鑑定書付き</span><span data-lang="en">GGI Certified</span><span data-lang="zh">GGI認證</span></div><div class="trust-desc"><span data-lang="ja" class="active">産地・無加熱・無処理をGGIが公式に証明。鑑定書を完備しています。</span><span data-lang="en">GGI officially certifies origin, unheated and untreated status.</span><span data-lang="zh">GGI官方認證產地、未加熱及無處理狀態。</span></div></div>
+      <div class="trust-item"><div class="trust-icon">📍</div><div class="trust-title"><span data-lang="ja" class="active">産地直接調達</span><span data-lang="en">Direct source</span><span data-lang="zh">直接產地採購</span></div><div class="trust-desc"><span data-lang="ja" class="active">パキスタン・ナガル渓谷の鉱山から直接仕入れ。中間業者なし。</span><span data-lang="en">Sourced directly from the Nagar Valley mines. No middlemen.</span><span data-lang="zh">直接來自巴基斯坦納加爾谷礦場，無中間商。</span></div></div>
+      <div class="trust-item"><div class="trust-icon">✅</div><div class="trust-title"><span data-lang="ja" class="active">正規輸入・通関済み</span><span data-lang="en">Legal import completed</span><span data-lang="zh">合法進口清關完成</span></div><div class="trust-desc"><span data-lang="ja" class="active">日本への正規輸入・通関手続きはすべて完了済みです。</span><span data-lang="en">All Japanese customs clearance formally completed.</span><span data-lang="zh">已完成所有日本正規進口及清關手續。</span></div></div>
     </div>
   </div>
 </div>
-
 <div id="contact">
-  <div class="contact-bar">
-    <div class="contact-text">
-      <h3>
-        <span data-lang="ja" class="active">購入・商談のお問い合わせ</span>
-        <span data-lang="en">Enquiries & trade buyers</span>
-        <span data-lang="zh">購買及商業查詢</span>
-      </h3>
-      <p>
-        <span data-lang="ja" class="active">コレクター・宝飾業者・香港バイヤーの方、お気軽にご連絡ください。</span>
-        <span data-lang="en">Collectors, jewellers, and Hong Kong buyers welcome.</span>
-        <span data-lang="zh">歡迎收藏家、珠寶商及香港買家查詢。</span>
-      </p>
-    </div>
-    <a href="mailto:info@sonugems.com" class="btn-primary">
-      <span data-lang="ja" class="active">メールで問い合わせる →</span>
-      <span data-lang="en">Get in touch →</span>
-      <span data-lang="zh">立即查詢 →</span>
-    </a>
+  <div class="contact-section">
+    <div class="section-eyebrow" style="text-align:center;">Contact</div>
+    <h2><span data-lang="ja" class="active">購入・商談のお問い合わせ</span><span data-lang="en">Enquiries & trade buyers</span><span data-lang="zh">購買及商業查詢</span></h2>
+    <p><span data-lang="ja" class="active">コレクター・宝飾業者・香港バイヤーの方、またオークション出品をご検討の方は、お気軽にご連絡ください。日本語・英語・中国語にて対応いたします。</span><span data-lang="en">Collectors, jewellers, Hong Kong buyers, and auction houses are welcome. We respond in Japanese, English, and Chinese.</span><span data-lang="zh">歡迎收藏家、珠寶商、香港買家及拍賣行查詢。我們以日語、英語及中文回覆。</span></p>
+    <a href="mailto:info@sonugems.com" class="contact-btn"><span data-lang="ja" class="active">メールでお問い合わせ →</span><span data-lang="en">Get in touch →</span><span data-lang="zh">立即查詢 →</span></a>
   </div>
 </div>
-
 <footer>
-  <div class="footer-logo">SONU GEMS</div>
-  <div class="footer-copy">© 2025 SONU Gems · Tokyo, Japan · info@sonugems.com</div>
+  <div class="footer-logo"><img src="スクリーンショット 2026-04-22 16.22.17.png" alt="Sonu Gems"></div>
+  <div class="footer-copy">© 2025 Sonu Gems · Tokyo, Japan · info@sonugems.com</div>
 </footer>
-
 <script>
 function setLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(function(el) {
@@ -398,12 +231,20 @@ function setLang(lang) {
   });
   document.querySelectorAll('.lang-btn').forEach(function(btn) {
     var t = btn.textContent;
-    var match = (lang === 'ja' && t.includes('JP')) ||
-                (lang === 'en' && t.includes('EN')) ||
-                (lang === 'zh' && t.includes('繁'));
+    var match = (lang === 'ja' && t.includes('JP')) || (lang === 'en' && t.includes('EN')) || (lang === 'zh' && t.includes('繁'));
     btn.classList.toggle('active', match);
   });
 }
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 </script>
 </body>
 </html>
